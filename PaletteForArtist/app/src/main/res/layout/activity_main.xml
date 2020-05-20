@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/app_default_margin"
+        android:layout_marginTop="@dimen/app_default_margin"
+        android:layout_marginEnd="@dimen/app_default_margin"
+        android:layout_marginBottom="@dimen/app_default_margin"
+        app:layout_constraintBottom_toTopOf="@+id/colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/monsted_flowers" />
+
+    <LinearLayout
+        android:id="@+id/colors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_default_margin"
+        android:layout_marginEnd="@dimen/app_default_margin"
+        android:layout_marginBottom="@dimen/app_default_24_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include
+            android:id="@+id/card_color_1"
+            layout="@layout/palette_color" />
+
+        <include
+            android:id="@+id/card_color_2"
+            layout="@layout/palette_color" />
+
+        <include
+            android:id="@+id/card_color_3"
+            layout="@layout/palette_color" />
+
+        <include
+            android:id="@+id/card_color_4"
+            layout="@layout/palette_color" />
+
+        <include
+            android:id="@+id/card_color_5"
+            layout="@layout/palette_color" />
+
+        <include
+            android:id="@+id/card_color_6"
+            layout="@layout/palette_color" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

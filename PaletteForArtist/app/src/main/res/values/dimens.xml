@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_default_margin">16dp</dimen>
+    <dimen name="app_default_24_margin">24dp</dimen>
+    <dimen name="color_palette_size">32dp</dimen>
+    <dimen name="card_color_margin_end">4dp</dimen>
+    <dimen name="card_color_stroke_width">1dp</dimen>
+</resources>
