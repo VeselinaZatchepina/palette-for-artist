@@ -1,6 +1,7 @@
 package com.github.veselinazatchepina.paletteforartist
 
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.Matrix
 import android.os.Bundle
 import android.view.MotionEvent
@@ -22,6 +23,10 @@ import kotlin.math.floor
  * В примере не были обработаны различные углы touch event и отрисовка выбранной области.
  */
 class MainActivity : AppCompatActivity(), View.OnTouchListener {
+
+    companion object {
+        private const val DEFAULT_COLOR = Color.TRANSPARENT
+    }
 
     private var paletteBuilder: Palette.Builder? = null
     private var startXTouchCoordinate = 0
@@ -95,27 +100,27 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
     private fun generatePalette() {
         paletteBuilder?.generate { palette: Palette? ->
 
-            palette?.getDominantColor(0)?.let {
+            palette?.getDominantColor(Color.TRANSPARENT)?.let {
                 card_color_1.card_color.setBackgroundColor(it)
             }
 
-            palette?.getMutedColor(0)?.let {
+            palette?.getMutedColor(DEFAULT_COLOR)?.let {
                 card_color_2.card_color.setBackgroundColor(it)
             }
 
-            palette?.getLightVibrantColor(0)?.let {
+            palette?.getLightVibrantColor(DEFAULT_COLOR)?.let {
                 card_color_3.card_color.setBackgroundColor(it)
             }
 
-            palette?.getLightMutedColor(0)?.let {
+            palette?.getLightMutedColor(DEFAULT_COLOR)?.let {
                 card_color_4.card_color.setBackgroundColor(it)
             }
 
-            palette?.getDarkVibrantColor(0)?.let {
+            palette?.getDarkVibrantColor(DEFAULT_COLOR)?.let {
                 card_color_5.card_color.setBackgroundColor(it)
             }
 
-            palette?.getDarkMutedColor(0)?.let {
+            palette?.getDarkMutedColor(DEFAULT_COLOR)?.let {
                 card_color_6.card_color.setBackgroundColor(it)
             }
         }
